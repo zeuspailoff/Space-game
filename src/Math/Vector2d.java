@@ -13,6 +13,14 @@ public class Vector2d {
         y = 0;
     }
 
+    public double getMagnitude() {
+        return Math.sqrt(x * x + y * y);
+    }
+
+    public Vector2d setDireccion(double angulo){
+        return new Vector2d(Math.cos(angulo)* getMagnitude(), Math.sin(angulo)* getMagnitude());
+    }
+
     public double getX() {
         return x;
     }

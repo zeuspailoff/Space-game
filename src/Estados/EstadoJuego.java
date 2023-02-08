@@ -11,7 +11,7 @@ public class EstadoJuego {
 
     public EstadoJuego(){
 
-        player = new Player(new Vector2d(100,500),Assets.player);
+        player = new Player(new Vector2d(100,500), new Vector2d(0,0),Assets.player);
     }
 
     public void actualizar(){

@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="agregamos recursos y ventana">
-      <change afterPath="$PROJECT_DIR$/src/Math/Vector2d.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosJuego.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/imput/Teclado.java" afterDir="false" />
+    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="agregamos jugador y movimiento x con keylisteners&#10;ademas de la clase objetos">
+      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CargarRecursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/CargarRecursos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Math/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math/Vector2d.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,13 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675788756708</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="agregamos jugador y movimiento x con keylisteners&#10;ademas de la clase objetos">
+      <created>1675857869101</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675857869101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1 commit" />
     <MESSAGE value="agregamos recursos y ventana" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregamos recursos y ventana" />
+    <MESSAGE value="agregamos jugador y movimiento x con keylisteners&#10;ademas de la clase objetos" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregamos jugador y movimiento x con keylisteners&#10;ademas de la clase objetos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
