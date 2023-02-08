@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.io.IOException;
+import Estados.EstadoJuego;
+import graphics.Assets;
+import imput.Teclado;
 
 
 public class Ventana extends JFrame implements Runnable{
@@ -18,6 +20,10 @@ public class Ventana extends JFrame implements Runnable{
     private double delta = 0;
     private int AVERAGEFPS = FPS;
 
+    private EstadoJuego estadoJuego;
+
+    private Teclado teclado;
+
 
 
 
@@ -33,6 +39,7 @@ public class Ventana extends JFrame implements Runnable{
         setVisible(true);
 
         canvas= new Canvas();
+        teclado = new Teclado();
 
         canvas.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         canvas.setMaximumSize(new Dimension(WIDTH, HEIGHT));
@@ -40,12 +47,14 @@ public class Ventana extends JFrame implements Runnable{
         canvas.setFocusable(true);
 
         add(canvas);
+        canvas.addKeyListener(teclado);
     }
 
 
 
     private void actualizar(){
-
+        teclado.actualizar();
+        estadoJuego.actualizar();
 
     }
     private void draw(  ){
@@ -58,8 +67,11 @@ public class Ventana extends JFrame implements Runnable{
         graphics = bs.getDrawGraphics();
         //zona para dibujar
 
-        graphics.fillRect(0,0,WIDTH,HEIGHT);
         graphics.setColor(Color.black);
+        graphics.fillRect(0,0,WIDTH,HEIGHT);
+
+       estadoJuego.draw(graphics);
+
         graphics.drawString(""+AVERAGEFPS, 10, 20);
 
         //------------------------------------------------
@@ -68,7 +80,9 @@ public class Ventana extends JFrame implements Runnable{
         bs.show();
     }
     private void init() {
+
         Assets.init();
+        estadoJuego = new EstadoJuego();
     }
     @Override
     public void run() {

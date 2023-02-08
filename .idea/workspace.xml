@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="agregamos recursos y ventana">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CargarRecursos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Math/Vector2d.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosJuego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imput/Teclado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip1_blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip1_green.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recourses/PNG/playerShip1_green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip1_orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recourses/PNG/playerShip1_orange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip1_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip2_blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recourses/PNG/playerShip2_blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip2_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip2_orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recourses/PNG/playerShip2_orange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip2_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip3_blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip3_green.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recourses/PNG/playerShip3_green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip3_orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recourses/PNG/playerShip3_orange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/playerShip3_red.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recourses/PNG/playerShip3_red.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CargarRecursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/CargarRecursos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,13 +42,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\proyectos open bootcamp\java\Game\src" />
@@ -98,7 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675782874874</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="agregamos recursos y ventana">
+      <created>1675788731807</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675788731807</updated>
+    </task>
+    <task id="LOCAL-00004" summary="agregamos recursos y ventana">
+      <created>1675788756708</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675788756708</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
