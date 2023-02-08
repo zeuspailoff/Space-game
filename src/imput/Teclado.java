@@ -7,17 +7,21 @@ public class Teclado implements KeyListener {
 
     private boolean[] keys = new boolean[256];
 
-    public static boolean UP, LEFT, RIGHT;
+    public static boolean UP, LEFT, RIGHT, SHOOT;
+
     public Teclado() {
 
         UP = false;
         LEFT = false;
         RIGHT = false;
+        SHOOT = false;
+
     }
     public void actualizar(){
         UP = keys[KeyEvent.VK_UP];
         LEFT = keys[KeyEvent.VK_LEFT];
         RIGHT = keys[KeyEvent.VK_RIGHT];
+        SHOOT = keys[KeyEvent.VK_NUMPAD0];
     }
 
     @Override
