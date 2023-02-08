@@ -12,6 +12,29 @@ public class Vector2d {
         x = 0;
         y = 0;
     }
+    public Vector2d add(Vector2d v) {
+        return new Vector2d(x + v.getX(), y + v.getY());
+    }
+    public Vector2d escalar(double valor) {
+        return new Vector2d(x*valor, y*valor);
+    }
+    public void limite(double valor) {
+        if(x > valor){
+            x = valor;
+        }
+        if (x < -valor){
+            x = -valor;
+        }
+        if(y > valor){
+            y = valor;
+        }
+        if (y < -valor){
+            y = -valor;
+        }
+    }
+    public Vector2d normalizar(){
+        return new Vector2d(x/ getMagnitude(), y/ getMagnitude());
+    }
 
     public double getMagnitude() {
         return Math.sqrt(x * x + y * y);
