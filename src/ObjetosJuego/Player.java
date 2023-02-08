@@ -14,6 +14,7 @@ public class Player extends ObjetosMobi{
     private Vector2d acceleracion;
     private final double ACC = 0.2;
     private final double DELTAANGULO = 0.1;
+    private boolean accelerando = false;
 
 
     public Player(Vector2d position, Vector2d velocidad,double maxVel, BufferedImage textura) {
@@ -33,13 +34,15 @@ public class Player extends ObjetosMobi{
         }
         if(Teclado.UP){
             acceleracion= direccion.escalar(ACC);
+            accelerando = true;
         }else {
             if (velocidad.getMagnitude() != 0){
                 acceleracion = (velocidad.escalar(-1).normalizar()).escalar(ACC/2);
+                accelerando = false;
             }
         }
         velocidad = velocidad.add(acceleracion);
-        velocidad.limite(maxVel);
+        velocidad= velocidad.limite(maxVel);
         direccion = direccion.setDireccion(angulo - Math.PI/2);
         position = position.add(velocidad);
         if(position.getX() > Ventana.WIDTH){
@@ -59,8 +62,25 @@ public class Player extends ObjetosMobi{
     @Override
     public void draw(Graphics graphics) {
         Graphics2D graphics2D = (Graphics2D) graphics;
+
+
+        AffineTransform at1 = AffineTransform.getTranslateInstance(position.getX()+ ancho/2 - 6
+                , position.getY() + altura/2 + 10);
+
+
+        at1.rotate(angulo, +6, -10);
+
+
+        if(accelerando){
+            graphics2D.drawImage(Assets.fuego, at1, null);
+
+        }
+
+
+
+
         at = AffineTransform.getTranslateInstance(position.getX(), position.getY());
-        at.rotate(angulo, Assets.player.getWidth()/2, Assets.player.getHeight()/2);
+        at.rotate(angulo, ancho/2, altura/2);
         graphics2D.drawImage(Assets.player, at, null);
     }
 }

@@ -18,19 +18,11 @@ public class Vector2d {
     public Vector2d escalar(double valor) {
         return new Vector2d(x*valor, y*valor);
     }
-    public void limite(double valor) {
-        if(x > valor){
-            x = valor;
-        }
-        if (x < -valor){
-            x = -valor;
-        }
-        if(y > valor){
-            y = valor;
-        }
-        if (y < -valor){
-            y = -valor;
-        }
+    public Vector2d limite(double valor) {
+       if(getMagnitude() > valor){
+           return this.normalizar().escalar(valor);
+       }
+       return this;
     }
     public Vector2d normalizar(){
         return new Vector2d(x/ getMagnitude(), y/ getMagnitude());

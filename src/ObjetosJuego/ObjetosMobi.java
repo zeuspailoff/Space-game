@@ -11,12 +11,16 @@ public class ObjetosMobi extends ObjetosJuego {
     protected AffineTransform at;
     protected double angulo;
     protected double maxVel;
+    protected int ancho;
+    protected int altura;
 
 
     public ObjetosMobi(Vector2d position, Vector2d velocidad,double maxVel, BufferedImage textura) {
         super(position, textura);
         this.velocidad = velocidad;
         this.maxVel = maxVel;
+        ancho = textura.getWidth();
+        altura = textura.getHeight();
         angulo = 0;
     }
 
