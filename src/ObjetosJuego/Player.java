@@ -21,10 +21,10 @@ public class Player extends ObjetosMobi{
     @Override
     public void actualizar() {
         if(Teclado.RIGHT){
-            angulo += Math.PI/10;
+            angulo += Math.PI/25;
         }
         if(Teclado.LEFT){
-            angulo -= Math.PI/10;
+            angulo -= Math.PI/25;
         }
 
        direccion = direccion.setDireccion(angulo - Math.PI/2);

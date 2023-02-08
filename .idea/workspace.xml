@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="agregamos jugador y movimiento x con keylisteners&#10;ademas de la clase objetos">
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Math/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math/Vector2d.java" afterDir="false" />
+    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="agregamos rotacion">
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,14 +107,22 @@
       <option name="project" value="LOCAL" />
       <updated>1675857869101</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="agregamos rotacion">
+      <created>1675859899640</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675859899640</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1 commit" />
     <MESSAGE value="agregamos recursos y ventana" />
     <MESSAGE value="agregamos jugador y movimiento x con keylisteners&#10;ademas de la clase objetos" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregamos jugador y movimiento x con keylisteners&#10;ademas de la clase objetos" />
+    <MESSAGE value="agregamos rotacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregamos rotacion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
