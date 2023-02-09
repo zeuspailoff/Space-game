@@ -63,9 +63,7 @@ public class Assets {
         // vidas y numeros
         vida = CargarRecursos.CargaImagen("/Recourses/PNG/UI/vidas/playerLife2_red.png");
 
-        for (int i = 0; i < numeros.length; i++){
-            numeros[i]= CargarRecursos.CargaImagen("/Recourses/PNG/UI/numeros/" +(i + 1)+ ".png" );
-        }
+
 
     }
 }

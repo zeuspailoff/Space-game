@@ -179,7 +179,9 @@ public class EstadoJuego {
 
         for(int i = 0; i < puntuacionToString.length(); i++){
 
-            graphics.drawImage(Assets.nu);
+            graphics.drawImage(Assets.numeros
+                    [Integer.parseInt(puntuacionToString.substring(i, i+1))],
+                    (int)pos.getX(), (int)pos.getY(),null);
         }
     }
 
