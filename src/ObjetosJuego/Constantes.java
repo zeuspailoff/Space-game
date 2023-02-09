@@ -12,5 +12,7 @@ public class Constantes {
     public static long RATIO_DISPATO = 1000;
     public static final double LASER_VEL = 15.0;
     public static double UFO_ANGLE_RANGE = Math.PI / 2;
+    public static final int ENEMIGO_PUNTOS = 40;
+    public static final int ASTEROIDES_PUNTOS = 20;
 
 }

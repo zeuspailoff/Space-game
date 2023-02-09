@@ -16,6 +16,7 @@ public class EstadoJuego {
     private ArrayList<ObjetosMobi> objetosMobi = new ArrayList<ObjetosMobi>();
 
     private ArrayList<Animacion> explociones = new ArrayList<Animacion>();
+    private int puntuacion;
     private int asteroides;
 
     public EstadoJuego() {
@@ -25,6 +26,9 @@ public class EstadoJuego {
 
         asteroides = 1;
         iniciarOleada();
+    }
+    public void addPuntuacion(int valor){
+        puntuacion+= valor;
     }
 
     public void dividirAsteroide(Asteroides asteroides) {
@@ -167,6 +171,19 @@ public class EstadoJuego {
                     null );
         }
     }
+
+    private void drawPuntuacion(Graphics2D graphics){
+
+        Vector2d pos = new Vector2d(850,25);
+        String puntuacionToString = Integer.toString(puntuacion);
+
+        for(int i = 0; i < puntuacionToString.length(); i++){
+
+            graphics.drawImage(Assets.nu);
+        }
+    }
+
+
     public ArrayList<ObjetosMobi> getObjetosMobi() {
 
         return objetosMobi;

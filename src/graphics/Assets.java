@@ -23,6 +23,12 @@ public class Assets {
     //enemigos
     public static BufferedImage enemigo;
 
+    //numeros
+
+    public static BufferedImage[] numeros = new BufferedImage[11];
+
+    public static BufferedImage vida;
+
     public static void init()  {
         //jugador
         player = CargarRecursos.CargaImagen("/Recourses/PNG/playerShip3_red.png");
@@ -53,6 +59,13 @@ public class Assets {
         }
         //enemigos
         enemigo = CargarRecursos.CargaImagen("/Recourses/PNG/ufoYellow.png");
+
+        // vidas y numeros
+        vida = CargarRecursos.CargaImagen("/Recourses/PNG/UI/vidas/playerLife2_red.png");
+
+        for (int i = 0; i < numeros.length; i++){
+            numeros[i]= CargarRecursos.CargaImagen("/Recourses/PNG/UI/numeros/" +(i + 1)+ ".png" );
+        }
 
     }
 }

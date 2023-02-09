@@ -104,6 +104,12 @@ public class Enemigos extends ObjetosMobi{
     }
 
     @Override
+    public void Destruir(){
+        estadoJuego.addPuntuacion(Constantes.ENEMIGO_PUNTOS);
+        super.Destruir();
+    }
+
+    @Override
     public void draw(Graphics graphics) {
 
         Graphics2D graphics2D = (Graphics2D) graphics;
