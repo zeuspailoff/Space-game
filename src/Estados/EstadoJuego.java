@@ -21,6 +21,40 @@ public class EstadoJuego {
         asteroides = 1;
         iniciarOleada();
     }
+
+    public void dividirAsteroide(Asteroides asteroides) {
+        Size size = asteroides.getSize();
+        BufferedImage[] textura = size.textura;
+
+        Size newSize = null;
+
+        switch (size){
+            case BIG:
+                newSize = Size.MED;
+                break;
+            case MED:
+                newSize = Size.SMALL;
+                break;
+            case SMALL:
+                newSize = Size.TINY;
+                break;
+            default:
+                return;
+
+        }
+
+        for(int i = 0; i < size.cantidad; i++){
+            objetosMobi.add(new Asteroides(
+                    asteroides.getPosition(),
+                    new Vector2d(0 , 1).setDireccion(Math.random()* Math.PI*2),
+                    Constantes.ASTEROID_VEL * Math.random() + 1 ,
+                    textura[(int)(Math.random() * textura.length)],
+                    this,
+                    newSize
+            ));
+
+        }
+    }
     public void iniciarOleada() {
         double x, y ;
 

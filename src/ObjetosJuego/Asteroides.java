@@ -19,6 +19,7 @@ public class Asteroides extends ObjetosMobi{
             Vector2d position, Vector2d velocidad, double maxVel, BufferedImage textura, EstadoJuego estadoJuego, Size size) {
         super(position, velocidad, maxVel, textura, estadoJuego);
         this.size = size;
+        this.velocidad = velocidad.escalar(maxVel);
     }
 
 
@@ -41,6 +42,12 @@ public class Asteroides extends ObjetosMobi{
         }
         angulo+= DELTAANGULO;
 
+    }
+
+    @Override
+    public void Destruir(){
+        estadoJuego.dividirAsteroide(this);
+        super.Destruir();
     }
 
     @Override
