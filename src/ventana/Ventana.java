@@ -1,5 +1,8 @@
 package ventana;
 
+import ObjetosJuego.Constantes;
+import ObjetosJuego.Constantes.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -10,7 +13,7 @@ import imput.Teclado;
 
 public class Ventana extends JFrame implements Runnable{
 
-    public static final int WIDTH = 900, HEIGHT = 700;
+
     private final Canvas canvas;
     private Thread thread;
     private BufferStrategy bs;
@@ -32,26 +35,25 @@ public class Ventana extends JFrame implements Runnable{
     public Ventana() {
         // preparamos ventana de juego
         setTitle("Space game ");
-        setSize(WIDTH, HEIGHT);
+        setSize(Constantes.WIDTH, Constantes.HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLocationRelativeTo(null);
-        setIconImage(getIconImage());
 
-        setVisible(true);
+
 
         canvas= new Canvas();
         teclado = new Teclado();
 
-        canvas.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-        canvas.setMaximumSize(new Dimension(WIDTH, HEIGHT));
-        canvas.setMinimumSize(new Dimension(WIDTH, HEIGHT));
+        canvas.setPreferredSize(new Dimension(Constantes.WIDTH,  Constantes.HEIGHT));
+        canvas.setMaximumSize(new Dimension(Constantes.WIDTH,  Constantes.HEIGHT));
+        canvas.setMinimumSize(new Dimension(Constantes.WIDTH,  Constantes.HEIGHT));
         canvas.setFocusable(true);
 
         add(canvas);
         canvas.addKeyListener(teclado);
+        setVisible(true);
     }
-
 
 
     private void actualizar(){
@@ -70,7 +72,7 @@ public class Ventana extends JFrame implements Runnable{
         //zona para dibujar
 
         graphics.setColor(Color.black);
-        graphics.fillRect(0,0,WIDTH,HEIGHT);
+        graphics.fillRect(0,0,Constantes.WIDTH, Constantes.HEIGHT);
 
        estadoJuego.draw(graphics);
 

@@ -21,7 +21,7 @@ public class Teclado implements KeyListener {
         UP = keys[KeyEvent.VK_UP];
         LEFT = keys[KeyEvent.VK_LEFT];
         RIGHT = keys[KeyEvent.VK_RIGHT];
-        SHOOT = keys[KeyEvent.VK_NUMPAD0];
+        SHOOT = keys[KeyEvent.VK_C];
     }
 
     @Override

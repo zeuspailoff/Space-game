@@ -9,40 +9,44 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
+import static ObjetosJuego.Constantes.DELTAANGULO;
+
 public class Player extends ObjetosMobi{
 
     private Vector2d direccion;
     private Vector2d acceleracion;
     private final double ACC = 0.2;
-    private final double DELTAANGULO = 0.1;
-    private boolean accelerando = false;
-    private EstadoJuego estadoJuego;
 
-    private long time, lastTime;
+    private boolean accelerando = false;
+
+    private  Cronometro ratioDisparo;
+
+
 
 
     public Player(Vector2d position, Vector2d velocidad, double maxVel, BufferedImage textura, EstadoJuego estadoJuego) {
-        super(position, velocidad, maxVel,textura);
+        super(position, velocidad, maxVel,textura, estadoJuego);
         this.estadoJuego = estadoJuego;
         direccion = new Vector2d(0,1);
         acceleracion = new Vector2d();
-        time = 0;
-        lastTime = System.currentTimeMillis();
+        ratioDisparo = new Cronometro();
+
     }
 
 
     @Override
     public void actualizar() {
-        time += System.currentTimeMillis() - lastTime;
-        lastTime = System.currentTimeMillis();
-        if(Teclado.SHOOT && time > 100){
-            estadoJuego.getObjetosMobi().add(0, new Laser(
+
+        if(Teclado.SHOOT && !ratioDisparo.isActivo()){
+            estadoJuego.getObjetosMobi().add(new Laser(
                     getCenter().add(direccion.escalar(ancho)),
                     direccion,
                     10,
                     angulo,
-                    Assets.redLaser
+                    Assets.greenLaser,
+                    estadoJuego
             ));
+            ratioDisparo.encendido(Constantes.RATIODISPARO);
         }
 
         if(Teclado.RIGHT){
@@ -64,18 +68,19 @@ public class Player extends ObjetosMobi{
         velocidad= velocidad.limite(maxVel);
         direccion = direccion.setDireccion(angulo - Math.PI/2);
         position = position.add(velocidad);
-        if(position.getX() > Ventana.WIDTH){
+        if(position.getX() > Constantes.WIDTH){
             position.setX(0);
         }
-        if(position.getY() > Ventana.HEIGHT){
+        if(position.getY() > Constantes.HEIGHT){
             position.setY(0);
         }
         if(position.getX()< 0){
-            position.setX(Ventana.WIDTH);
+            position.setX(Constantes.WIDTH);
         }
         if(position.getY()< 0){
-            position.setY(Ventana.HEIGHT);
+            position.setY(Constantes.HEIGHT);
         }
+        ratioDisparo.actualizar();
     }
 
     @Override
@@ -104,6 +109,7 @@ public class Player extends ObjetosMobi{
     }
 
     public Vector2d getCenter() {
+
         return new Vector2d(position.getX() + ancho/2, position.getY() + altura/2);
     }
 }

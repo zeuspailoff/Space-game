@@ -25,15 +25,21 @@ public class Vector2d {
        return this;
     }
     public Vector2d normalizar(){
-        return new Vector2d(x/ getMagnitude(), y/ getMagnitude());
+
+        double magnitude = getMagnitude();
+
+        return new Vector2d(x/ magnitude, y/ magnitude);
     }
 
     public double getMagnitude() {
+
         return Math.sqrt(x * x + y * y);
     }
 
     public Vector2d setDireccion(double angulo){
-        return new Vector2d(Math.cos(angulo)* getMagnitude(), Math.sin(angulo)* getMagnitude());
+        double magnitude = getMagnitude();
+
+        return new Vector2d(Math.cos(angulo)* magnitude, Math.sin(angulo)* magnitude);
     }
 
     public double getX() {

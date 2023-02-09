@@ -1,5 +1,6 @@
 package ObjetosJuego;
 
+import Estados.EstadoJuego;
 import Math.Vector2d;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -13,12 +14,14 @@ public class ObjetosMobi extends ObjetosJuego {
     protected double maxVel;
     protected int ancho;
     protected int altura;
+    protected EstadoJuego estadoJuego;
 
 
-    public ObjetosMobi(Vector2d position, Vector2d velocidad,double maxVel, BufferedImage textura) {
+    public ObjetosMobi(Vector2d position, Vector2d velocidad, double maxVel, BufferedImage textura, EstadoJuego estadoJuego) {
         super(position, textura);
         this.velocidad = velocidad;
         this.maxVel = maxVel;
+        this.estadoJuego = estadoJuego;
         ancho = textura.getWidth();
         altura = textura.getHeight();
         angulo = 0;
