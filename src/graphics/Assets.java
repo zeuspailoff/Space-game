@@ -24,16 +24,16 @@ public class Assets {
 
 
         for(int i = 0; i < big.length; i++) {
-            big[i]= CargarRecursos.CargaImagen("Recourses/PNG/Meteors/big" +(i + 1)+ ".png" );
+            big[i]= CargarRecursos.CargaImagen("/Recourses/PNG/Meteors/big" +(i + 1)+ ".png" );
         }
         for(int i = 0; i < med.length; i++) {
-            med[i]= CargarRecursos.CargaImagen("Recourses/PNG/Meteors/med" +(i + 1)+ ".png" );
+            med[i]= CargarRecursos.CargaImagen("/Recourses/PNG/Meteors/med" +(i + 1)+ ".png" );
         }
         for(int i = 0; i < small.length; i++) {
-            small[i]= CargarRecursos.CargaImagen("Recourses/PNG/Meteors/small" +(i + 1)+ ".png" );
+            small[i]= CargarRecursos.CargaImagen("/Recourses/PNG/Meteors/small" +(i + 1)+ ".png" );
         }
         for(int i = 0; i < tiny.length; i++) {
-            tiny[i]= CargarRecursos.CargaImagen("Recourses/PNG/Meteors/tiny" +(i + 1)+ ".png" );
+            tiny[i]= CargarRecursos.CargaImagen("/Recourses/PNG/Meteors/tiny" +(i + 1)+ ".png" );
         }
     }
 }

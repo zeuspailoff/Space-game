@@ -28,15 +28,15 @@ public class Asteroides extends ObjetosMobi{
             position = position.add(velocidad);
 
         if(position.getX() > Constantes.WIDTH){
-            position.setX(0);
+            position.setX(- ancho);
         }
         if(position.getY() > Constantes.HEIGHT){
-            position.setY(0);
+            position.setY(- altura);
         }
-        if(position.getX()< 0){
+        if(position.getX()< - ancho){
             position.setX(Constantes.WIDTH);
         }
-        if(position.getY()< 0){
+        if(position.getY()< - altura){
             position.setY(Constantes.HEIGHT);
         }
         angulo+= DELTAANGULO;

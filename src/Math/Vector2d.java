@@ -15,6 +15,11 @@ public class Vector2d {
     public Vector2d add(Vector2d v) {
         return new Vector2d(x + v.getX(), y + v.getY());
     }
+
+    public Vector2d subtrat(Vector2d v) {
+        return new Vector2d(x - v.getX(), y - v.getY());
+    }
+
     public Vector2d escalar(double valor) {
         return new Vector2d(x*valor, y*valor);
     }

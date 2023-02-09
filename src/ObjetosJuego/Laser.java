@@ -20,10 +20,11 @@ public class Laser extends ObjetosMobi{
     public void actualizar() {
 
         position = position.add(velocidad);
-        if(position.getX() < 0 || position.getX() > ancho || position.getY() < 0 || position.getY() > altura ){
-            estadoJuego.getObjetosMobi().remove(greenLaser);
+        if(position.getX() < 0 || position.getX() > Constantes.WIDTH || position.getY() < 0 || position.getY() > Constantes.HEIGHT ){
+            Destruir();
 
         }
+        colisiones();
     }
 
     @Override
@@ -33,5 +34,11 @@ public class Laser extends ObjetosMobi{
         at.rotate(angulo );
 
         graphics2D.drawImage(textura, at, null);
+    }
+
+    @Override
+    public Vector2d getCenter() {
+
+        return new Vector2d(position.getX() + ancho/2, position.getY() + ancho/2);
     }
 }

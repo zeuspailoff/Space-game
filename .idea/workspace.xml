@@ -5,39 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="terminamos movimiento nave con fuego de propulsion">
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/Asteroides.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/Cronometro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/Size.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Math/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math/Vector2d.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Asteroides.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Asteroides.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Laser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Laser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_big1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_big2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_big3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_big4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_med1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_med3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_small1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_small2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_tiny1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorBrown_tiny2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_big1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_big2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_big3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_big4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_med1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_med2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_small1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_small2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_tiny1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/PNG/Meteors/meteorGrey_tiny2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imput/Teclado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imput/Teclado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventana/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675866728501</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="terminamos movimiento nave con fuego de propulsion">
+      <created>1675953872637</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675953872637</updated>
+    </task>
+    <task id="LOCAL-00011" summary="terminamos movimiento nave con fuego de propulsion">
+      <created>1675953883689</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675953883689</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -39,12 +39,19 @@ public class EstadoJuego {
                     Size.BIG
             ));
         }
+        asteroides++;
     }
 
     public void actualizar() {
 
         for (int i = 0; i < objetosMobi.size(); i++)
             objetosMobi.get(i).actualizar();
+
+        for (int i = 0; i < objetosMobi.size(); i++)
+            if(objetosMobi.get(i) instanceof Asteroides)
+                return;
+
+        iniciarOleada();
 
     }
 

@@ -81,6 +81,7 @@ public class Player extends ObjetosMobi{
             position.setY(Constantes.HEIGHT);
         }
         ratioDisparo.actualizar();
+        colisiones();
     }
 
     @Override
@@ -108,8 +109,5 @@ public class Player extends ObjetosMobi{
         graphics2D.drawImage(Assets.player, at, null);
     }
 
-    public Vector2d getCenter() {
 
-        return new Vector2d(position.getX() + ancho/2, position.getY() + altura/2);
-    }
 }
