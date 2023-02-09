@@ -172,4 +172,7 @@ public class EstadoJuego {
         return objetosMobi;
     }
 
+    public Player getPlayer() {
+        return player;
+    }
 }

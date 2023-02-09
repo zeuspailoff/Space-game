@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="terminamos coliciones y disparos">
-      <change afterPath="$PROJECT_DIR$/src/ObjetosJuego/Enemigos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/PNG/explocions/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/Animacion.java" afterDir="false" />
+    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="agregamos enemigos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Math/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math/Vector2d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Enemigos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Enemigos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675958458479</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="agregamos enemigos">
+      <created>1675983002659</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675983002659</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,7 +197,8 @@
     <MESSAGE value="terminamos movimiento nave" />
     <MESSAGE value="terminamos movimiento nave con fuego de propulsion" />
     <MESSAGE value="terminamos coliciones y disparos" />
-    <option name="LAST_COMMIT_MESSAGE" value="terminamos coliciones y disparos" />
+    <MESSAGE value="agregamos enemigos" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregamos enemigos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

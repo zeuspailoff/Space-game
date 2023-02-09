@@ -47,6 +47,10 @@ public class Vector2d {
         return new Vector2d(Math.cos(angulo)* magnitude, Math.sin(angulo)* magnitude);
     }
 
+    public double getAngulo(){
+        return Math.asin(y/getMagnitude());
+    }
+
     public double getX() {
         return x;
     }

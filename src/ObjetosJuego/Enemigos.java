@@ -2,6 +2,7 @@ package ObjetosJuego;
 
 import Estados.EstadoJuego;
 import Math.Vector2d;
+import graphics.Assets;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -14,11 +15,14 @@ public class Enemigos extends ObjetosMobi{
     private Vector2d node;
     private int index;
     private boolean siguiendo;
+    private Cronometro ratioDisparo;
     public Enemigos(Vector2d position, Vector2d velocidad, double maxVel, BufferedImage textura, ArrayList<Vector2d> path, EstadoJuego estadoJuego) {
         super(position, velocidad, maxVel, textura, estadoJuego);
         this.path = path;
         index = 0;
         siguiendo = true;
+        ratioDisparo = new Cronometro();
+        ratioDisparo.encendido(Constantes.RATIO_DISPATO);
     }
 
     private Vector2d pathSiguiendo(){
@@ -63,8 +67,39 @@ public class Enemigos extends ObjetosMobi{
                 position.getX() < 0 || position.getX() < 0){
             Destruir();
         }
+        //disparo enemigos
+        if(!ratioDisparo.isActivo()){
+            Vector2d toPlayer = estadoJuego.getPlayer().getCenter().subtrat(getCenter());
+
+            toPlayer = toPlayer.normalizar();
+
+            double anguloActual = toPlayer.getAngulo();
+            anguloActual = Math.random() * Constantes.UFO_ANGLE_RANGE - Constantes.UFO_ANGLE_RANGE /2;
+
+           if(toPlayer.getX() < 0){
+               anguloActual = -anguloActual + Math.PI;
+           }
+           toPlayer = toPlayer.setDireccion(anguloActual);
+
+            Laser laser = new Laser(
+                    getCenter().add(toPlayer.escalar(ancho)),
+                    toPlayer,
+                    Constantes.LASER_VEL,
+                    anguloActual + Math.PI/2,
+                    Assets.blueLaser,
+                    estadoJuego
+            );
+            estadoJuego.getObjetosMobi().add(0, laser);
+
+            ratioDisparo.encendido(Constantes.RATIO_DISPATO);
+
+
+        }
+
+
         angulo += 0.05;
         colisiones();
+        ratioDisparo.actualizar();
 
     }
 
@@ -81,9 +116,6 @@ public class Enemigos extends ObjetosMobi{
 
         graphics.setColor(Color.RED);
 
-        for (int i = 0; i < path.size(); i++){
-            graphics.drawRect((int) path.get(i).getY(), (int) path.get(i).getY(), 5 , 5);
-        }
 
     }
 }
