@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="Empezamod HUD">
-      <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
-    </list>
+    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="Empezamod HUD" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675985794575</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Empezamod HUD">
+      <created>1675986124506</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1675986124506</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
