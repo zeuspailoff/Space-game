@@ -1,16 +1,21 @@
 package Estados;
 import Math.Vector2d;
 import ObjetosJuego.*;
+import graphics.Animacion;
 import graphics.Assets;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import static graphics.Assets.enemigo;
+
 public class EstadoJuego {
 
     private Player player;
     private ArrayList<ObjetosMobi> objetosMobi = new ArrayList<ObjetosMobi>();
+
+    private ArrayList<Animacion> explociones = new ArrayList<Animacion>();
     private int asteroides;
 
     public EstadoJuego() {
@@ -55,6 +60,43 @@ public class EstadoJuego {
 
         }
     }
+
+    private void apareceEnemigo(){
+        int rand = (int) (Math.random()*2);
+
+        double x = rand == 0 ? (Math.random() * Constantes.WIDTH): 0;
+        double y = rand == 0 ? 0 : (Math.random() * Constantes.HEIGHT);
+
+        ArrayList<Vector2d> path = new ArrayList<Vector2d>();
+
+        double posX, posY;
+
+        posX = Math.random()*Constantes.WIDTH/2;
+        posY = Math.random()*Constantes.HEIGHT/2;
+        path.add(new Vector2d(posX, posY));
+
+        posX = Math.random()*(Constantes.WIDTH/2) + Constantes.WIDTH/2;
+        posY = Math.random()*Constantes.HEIGHT/2;
+        path.add(new Vector2d(posX, posY));
+
+        posX = Math.random()*Constantes.WIDTH/2;
+        posY = Math.random()*(Constantes.HEIGHT/2) + Constantes.HEIGHT/2;
+        path.add(new Vector2d(posX, posY));
+
+        posX = Math.random()*(Constantes.WIDTH/2) + Constantes.WIDTH/2;
+        posY = Math.random()*(Constantes.HEIGHT/2) + Constantes.HEIGHT/2;
+        path.add(new Vector2d(posX, posY));
+
+        objetosMobi.add(new Enemigos(
+                new Vector2d(x, y),
+                new Vector2d(),
+                Constantes.ENEMIGO_VELMAX,
+                Assets.enemigo,
+                path,
+                this
+        ));
+    }
+
     public void iniciarOleada() {
         double x, y ;
 
@@ -74,12 +116,30 @@ public class EstadoJuego {
             ));
         }
         asteroides++;
+        apareceEnemigo();
+    }
+
+    public void playExplociones(Vector2d position){
+        explociones.add(new Animacion(
+                Assets.exp,
+                50,
+                position.subtrat(new Vector2d(Assets.exp[0].getWidth()/2, Assets.exp[0].getHeight()/2))
+        ));
     }
 
     public void actualizar() {
 
         for (int i = 0; i < objetosMobi.size(); i++)
             objetosMobi.get(i).actualizar();
+
+        for (int i = 0; i < explociones.size(); i++){
+            Animacion anim = explociones.get(i);
+            anim.actualizar();
+            if(!anim.isRunning()){
+                explociones.remove(i);
+            }
+        }
+
 
         for (int i = 0; i < objetosMobi.size(); i++)
             if(objetosMobi.get(i) instanceof Asteroides)
@@ -97,12 +157,19 @@ public class EstadoJuego {
 
         for (int i = 0; i < objetosMobi.size(); i++)
             objetosMobi.get(i).draw(graphics);
-    }
 
+        for (int i = 0; i < explociones.size(); i++) {
+            Animacion anim = explociones.get(i);
+            graphics2D.drawImage(
+                    anim.getFotogramaActual(),
+                    (int) anim.getPosition().getX(),
+                    (int)anim.getPosition().getY(),
+                    null );
+        }
+    }
     public ArrayList<ObjetosMobi> getObjetosMobi() {
 
         return objetosMobi;
     }
-
 
 }
