@@ -1,7 +1,7 @@
 package graphics;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 public class Assets {
 
@@ -25,9 +25,17 @@ public class Assets {
 
     //numeros
 
-    public static BufferedImage[] numeros = new BufferedImage[11];
+    public static BufferedImage[] numero = new BufferedImage[10];
 
     public static BufferedImage vida;
+
+    //Fuentes
+
+    public static Font fuenteGrand;
+    public static Font fuenteMed;
+
+    public static Font fuentePeque;
+
 
     public static void init()  {
         //jugador
@@ -63,7 +71,13 @@ public class Assets {
         // vidas y numeros
         vida = CargarRecursos.CargaImagen("/Recourses/PNG/UI/vidas/playerLife2_red.png");
 
+        for(int i = 0; i < numero.length; i++){
+            numero[i]= CargarRecursos.CargaImagen("/Recourses/PNG/numeros/" + i + ".png" );
+        }
+        //fuente
 
-
+        fuenteGrand = CargarRecursos.cargarFuente("/Recourses/Bonus/kenvector_future.ttf", 42);
+        fuenteMed = CargarRecursos.cargarFuente("/Recourses/Bonus/kenvector_future.ttf", 20);
+        fuentePeque = CargarRecursos.cargarFuente("/Recourses/Bonus/kenvector_future.ttf", 12);
     }
 }

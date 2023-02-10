@@ -14,5 +14,8 @@ public class Constantes {
     public static double UFO_ANGLE_RANGE = Math.PI / 2;
     public static final int ENEMIGO_PUNTOS = 40;
     public static final int ASTEROIDES_PUNTOS = 20;
+    public static final long SPAWN_TIME = 3000;
+    public static final long PARPADEO_TIME = 200;
+    public static final double PLAYER_MAX_VEL = 8.0;
 
 }

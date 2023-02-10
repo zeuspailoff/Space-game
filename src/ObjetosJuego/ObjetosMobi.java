@@ -51,6 +51,12 @@ public class ObjetosMobi extends ObjetosJuego {
 
     private void objetosColision( ObjetosMobi a, ObjetosMobi b){
 
+        if( a instanceof Player && ((Player) a).isApareciendo()){
+            return;
+        }
+        if( b instanceof Player && ((Player) b).isApareciendo()) {
+            return;
+        }
         if (!(a instanceof Asteroides && b instanceof Asteroides)){
             estadoJuego.playExplociones(getCenter());
             a.Destruir();

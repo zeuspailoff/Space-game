@@ -3,12 +3,14 @@ import Math.Vector2d;
 import ObjetosJuego.*;
 import graphics.Animacion;
 import graphics.Assets;
+import graphics.Texto;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import static graphics.Assets.enemigo;
+import static graphics.Assets.vida;
 
 public class EstadoJuego {
 
@@ -19,9 +21,15 @@ public class EstadoJuego {
     private int puntuacion;
     private int asteroides;
 
+    private int vidas = 3;
+
+    private int oleada = 1;
+
     public EstadoJuego() {
 
-        player = new Player(new Vector2d(100, 500), new Vector2d(0, 0), 8, Assets.player, this);
+        player = new Player (new Vector2d(Constantes.WIDTH/2 - Assets.player.getWidth()/2,
+                Constantes.HEIGHT/2 - Assets.player.getHeight()/2), new Vector2d(),
+                Constantes.PLAYER_MAX_VEL, Assets.player, this);
         objetosMobi.add(player);
 
         asteroides = 1;
@@ -37,19 +45,13 @@ public class EstadoJuego {
 
         Size newSize = null;
 
-        switch (size){
-            case BIG:
-                newSize = Size.MED;
-                break;
-            case MED:
-                newSize = Size.SMALL;
-                break;
-            case SMALL:
-                newSize = Size.TINY;
-                break;
-            default:
+        switch (size) {
+            case BIG -> newSize = Size.MED;
+            case MED -> newSize = Size.SMALL;
+            case SMALL -> newSize = Size.TINY;
+            default -> {
                 return;
-
+            }
         }
 
         for(int i = 0; i < size.cantidad; i++){
@@ -150,6 +152,7 @@ public class EstadoJuego {
                 return;
 
         iniciarOleada();
+        apareceEnemigo();
 
     }
 
@@ -170,6 +173,10 @@ public class EstadoJuego {
                     (int)anim.getPosition().getY(),
                     null );
         }
+        drawPuntuacion((Graphics2D) graphics);
+        drawVidas((Graphics2D)graphics);
+        Texto.drawTexto(graphics, "OLEADA " + oleada, new Vector2d(Constantes.WIDTH/2, Constantes.HEIGHT /2),
+                true, Color.WHITE, Assets.fuenteGrand);
     }
 
     private void drawPuntuacion(Graphics2D graphics){
@@ -179,9 +186,30 @@ public class EstadoJuego {
 
         for(int i = 0; i < puntuacionToString.length(); i++){
 
-            graphics.drawImage(Assets.numeros
+            graphics.drawImage(Assets.numero
                     [Integer.parseInt(puntuacionToString.substring(i, i+1))],
                     (int)pos.getX(), (int)pos.getY(),null);
+            pos.setX(pos.getX() + 20);
+        }
+    }
+
+    private void drawVidas(Graphics graphics){
+        Vector2d vidaPos = new Vector2d(25 , 25);
+        graphics.drawImage(Assets.vida, (int) vidaPos.getX(), (int) vidaPos.getY() ,null);
+
+
+        String vidasToString = Integer.toString(vidas);
+
+        Vector2d pos = new Vector2d(vidaPos.getX(), vidaPos.getY());
+
+        for (int i = 0; i <vidasToString.length(); i++){
+            int numero = Integer.parseInt(vidasToString.substring(i, i+1));
+
+            if(numero <= 0){
+                break;
+            }
+            graphics.drawImage(Assets.numero[numero], (int) pos.getX() + 60, (int)pos.getY() + 5, null);
+            pos.setX(pos.getX() + 20);
         }
     }
 
@@ -193,5 +221,9 @@ public class EstadoJuego {
 
     public Player getPlayer() {
         return player;
+    }
+
+    public void quitarVida(){
+        vidas--;
     }
 }
