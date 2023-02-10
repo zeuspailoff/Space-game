@@ -3,6 +3,7 @@ package ObjetosJuego;
 import Estados.EstadoJuego;
 import Math.Vector2d;
 import graphics.Assets;
+import graphics.Sonido;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -16,6 +17,8 @@ public class Enemigos extends ObjetosMobi{
     private int index;
     private boolean siguiendo;
     private Cronometro ratioDisparo;
+
+    private Sonido enemigoLaser;
     public Enemigos(Vector2d position, Vector2d velocidad, double maxVel, BufferedImage textura, ArrayList<Vector2d> path, EstadoJuego estadoJuego) {
         super(position, velocidad, maxVel, textura, estadoJuego);
         this.path = path;
@@ -23,6 +26,7 @@ public class Enemigos extends ObjetosMobi{
         siguiendo = true;
         ratioDisparo = new Cronometro();
         ratioDisparo.encendido(Constantes.RATIO_DISPATO);
+        enemigoLaser = new Sonido(Assets.enemigoLaser);
     }
 
     private Vector2d pathSiguiendo(){
@@ -92,6 +96,7 @@ public class Enemigos extends ObjetosMobi{
             estadoJuego.getObjetosMobi().add(0, laser);
 
             ratioDisparo.encendido(Constantes.RATIO_DISPATO);
+            enemigoLaser.play();
 
 
         }

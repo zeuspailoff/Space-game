@@ -3,6 +3,7 @@ import Math.Vector2d;
 import ObjetosJuego.*;
 import graphics.Animacion;
 import graphics.Assets;
+import graphics.Sonido;
 import graphics.Texto;
 
 import java.awt.*;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import static graphics.Assets.enemigo;
 import static graphics.Assets.vida;
 
-public class EstadoJuego {
+public class EstadoJuego extends Estado{
 
     private Player player;
     private ArrayList<ObjetosMobi> objetosMobi = new ArrayList<ObjetosMobi>();
@@ -25,6 +26,7 @@ public class EstadoJuego {
     private int vidas = 3;
 
     private int oleada = 1;
+    private Sonido sonidoFondo;
 
     public EstadoJuego() {
 
@@ -35,6 +37,9 @@ public class EstadoJuego {
 
         asteroides = 1;
         iniciarOleada();
+        sonidoFondo = new Sonido(Assets.musicaFondo);
+        sonidoFondo.loop();
+        sonidoFondo.cambiarVolumen(-10.0f);
     }
     public void addPuntuacion(int valor, Vector2d position){
         puntuacion+= valor;

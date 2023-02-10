@@ -1,5 +1,6 @@
 package graphics;
 
+import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -35,6 +36,18 @@ public class Assets {
     public static Font fuenteMed;
 
     public static Font fuentePeque;
+
+    //sonidos
+
+    public static Clip musicaFondo, explociones, playerMuere, laser, enemigoLaser;
+
+    //botones
+
+    public static BufferedImage botonRed, botonBlue, botonGreen, botonYellow;
+
+    //Fondo
+
+    public static BufferedImage fondo;
 
 
     public static void init()  {
@@ -79,5 +92,25 @@ public class Assets {
         fuenteGrand = CargarRecursos.cargarFuente("/Recourses/Bonus/kenvector_future.ttf", 42);
         fuenteMed = CargarRecursos.cargarFuente("/Recourses/Bonus/kenvector_future.ttf", 20);
         fuentePeque = CargarRecursos.cargarFuente("/Recourses/Bonus/kenvector_future.ttf", 12);
+
+        //sonidos
+
+        musicaFondo = CargarRecursos.cargarSonido("/Recourses/Bonus/Instrumental-electronic-music.wav");
+        explociones = CargarRecursos.cargarSonido("/Recourses/Bonus/sfx_twoTone.wav");
+        playerMuere = CargarRecursos.cargarSonido("/Recourses/Bonus/sfx_lose.wav");
+        laser = CargarRecursos.cargarSonido("/Recourses/Bonus/sfx_laser1.wav");
+        enemigoLaser = CargarRecursos.cargarSonido("/Recourses/Bonus/sfx_zap.wav");
+
+        //botones
+
+        botonRed = CargarRecursos.CargaImagen("/Recourses/PNG/UI/buttonRed.png");
+        botonGreen = CargarRecursos.CargaImagen("/Recourses/PNG/UI/buttonGreen.png");
+        botonBlue = CargarRecursos.CargaImagen("/Recourses/PNG/UI/buttonBlue.png");
+        botonYellow = CargarRecursos.CargaImagen("/Recourses/PNG/UI/buttonYellow.png");
+
+        // fondo
+
+        fondo = CargarRecursos.CargaImagen("/Recourses/Backgrounds/purple.png");
+
     }
 }

@@ -2,6 +2,9 @@ package ObjetosJuego;
 
 import Estados.EstadoJuego;
 import Math.Vector2d;
+import graphics.Assets;
+import graphics.Sonido;
+
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
@@ -17,6 +20,8 @@ public class ObjetosMobi extends ObjetosJuego {
     protected int altura;
     protected EstadoJuego estadoJuego;
 
+    private Sonido texplociones;
+
 
     public ObjetosMobi(Vector2d position, Vector2d velocidad, double maxVel, BufferedImage textura, EstadoJuego estadoJuego) {
         super(position, textura);
@@ -26,6 +31,7 @@ public class ObjetosMobi extends ObjetosJuego {
         ancho = textura.getWidth();
         altura = textura.getHeight();
         angulo = 0;
+        texplociones = new Sonido(Assets.explociones);
     }
 
     protected void colisiones( ){
@@ -65,6 +71,10 @@ public class ObjetosMobi extends ObjetosJuego {
     }
     protected void Destruir() {
         estadoJuego.getObjetosMobi().remove(this);
+
+        if(!(this instanceof Laser)){
+            texplociones.play();
+        }
     }
 
     public Vector2d getCenter() {

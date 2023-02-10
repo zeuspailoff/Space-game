@@ -2,6 +2,7 @@ package ObjetosJuego;
 import Estados.EstadoJuego;
 import Math.Vector2d;
 import graphics.Assets;
+import graphics.Sonido;
 import imput.Teclado;
 import ventana.Ventana;
 
@@ -23,6 +24,8 @@ public class Player extends ObjetosMobi{
 
     private boolean apareciendo, visible ;
     private Cronometro spawnTime, parpadeoTime;
+    private Sonido laser;
+    private Sonido perder;
 
 
 
@@ -35,6 +38,8 @@ public class Player extends ObjetosMobi{
         ratioDisparo = new Cronometro();
         spawnTime = new Cronometro();
         parpadeoTime = new Cronometro();
+        laser = new Sonido(Assets.laser);
+        perder = new Sonido(Assets.playerMuere);
 
     }
 
@@ -65,6 +70,11 @@ public class Player extends ObjetosMobi{
                     estadoJuego
             ));
             ratioDisparo.encendido(Constantes.RATIODISPARO);
+            laser.play();
+        }
+
+        if(laser.getFramePosition() > 8500){
+            laser.parar();
         }
 
         if(Teclado.RIGHT){
@@ -108,6 +118,7 @@ public class Player extends ObjetosMobi{
     public void Destruir(){
         apareciendo = true;
         spawnTime.encendido(Constantes.SPAWN_TIME);
+        perder.play();
         resetValores();
         estadoJuego.quitarVida();
     }

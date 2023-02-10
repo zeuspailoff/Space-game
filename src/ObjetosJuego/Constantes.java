@@ -2,7 +2,8 @@ package ObjetosJuego;
 
 public class Constantes {
 
-    public static final int WIDTH = 1000, HEIGHT = 700;
+    public static final int WIDTH = 1000;
+    public static final int HEIGHT = 700;
     public static final double DELTAANGULO = 0.1;
     public static final int RATIODISPARO = 300;
     public static final double ASTEROID_VEL = 2.0;
@@ -17,5 +18,9 @@ public class Constantes {
     public static final long SPAWN_TIME = 3000;
     public static final long PARPADEO_TIME = 200;
     public static final double PLAYER_MAX_VEL = 8.0;
+    public static final String PLAY = "PLAY";
+
+    public static final String EXIT = "EXIT";
+
 
 }
