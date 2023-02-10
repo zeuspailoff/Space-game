@@ -49,7 +49,7 @@ public class Asteroides extends ObjetosMobi{
     @Override
     public void Destruir(){
         estadoJuego.dividirAsteroide(this);
-        estadoJuego.addPuntuacion(ASTEROIDES_PUNTOS);
+        estadoJuego.addPuntuacion(ASTEROIDES_PUNTOS, position);
         super.Destruir();
     }
 

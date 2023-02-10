@@ -18,6 +18,7 @@ public class EstadoJuego {
     private ArrayList<ObjetosMobi> objetosMobi = new ArrayList<ObjetosMobi>();
 
     private ArrayList<Animacion> explociones = new ArrayList<Animacion>();
+    private ArrayList<Mensaje> mensajes = new ArrayList<Mensaje>();
     private int puntuacion;
     private int asteroides;
 
@@ -35,8 +36,10 @@ public class EstadoJuego {
         asteroides = 1;
         iniciarOleada();
     }
-    public void addPuntuacion(int valor){
+    public void addPuntuacion(int valor, Vector2d position){
         puntuacion+= valor;
+        mensajes.add(new Mensaje(this, "+" +valor+ "PUNTOS", position,
+                Color.WHITE, false, true, Assets.fuenteMed ));
     }
 
     public void dividirAsteroide(Asteroides asteroides) {
@@ -104,6 +107,10 @@ public class EstadoJuego {
     }
 
     public void iniciarOleada() {
+
+        mensajes.add(new Mensaje (this, "OLEADA " + oleada,
+                new Vector2d(Constantes.WIDTH / 2, Constantes.HEIGHT / 2),
+                Color.WHITE, true, true, Assets.fuenteGrand ));
         double x, y ;
 
         for(int i = 0; i < asteroides; i++) {
@@ -162,8 +169,15 @@ public class EstadoJuego {
 
         graphics2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION,RenderingHints.VALUE_INTERPOLATION_BILINEAR);
 
-        for (int i = 0; i < objetosMobi.size(); i++)
+        for (int i = 0; i < mensajes.size(); i++){
+            mensajes.get(i).draw(graphics2D);
+        }
+
+
+        for (int i = 0; i < objetosMobi.size(); i++){
             objetosMobi.get(i).draw(graphics);
+        }
+
 
         for (int i = 0; i < explociones.size(); i++) {
             Animacion anim = explociones.get(i);
@@ -175,8 +189,7 @@ public class EstadoJuego {
         }
         drawPuntuacion((Graphics2D) graphics);
         drawVidas((Graphics2D)graphics);
-        Texto.drawTexto(graphics, "OLEADA " + oleada, new Vector2d(Constantes.WIDTH/2, Constantes.HEIGHT /2),
-                true, Color.WHITE, Assets.fuenteGrand);
+
     }
 
     private void drawPuntuacion(Graphics2D graphics){
@@ -213,6 +226,9 @@ public class EstadoJuego {
         }
     }
 
+    public ArrayList<Mensaje> getMensajes() {
+        return mensajes;
+    }
 
     public ArrayList<ObjetosMobi> getObjetosMobi() {
 

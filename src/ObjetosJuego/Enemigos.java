@@ -105,7 +105,7 @@ public class Enemigos extends ObjetosMobi{
 
     @Override
     public void Destruir(){
-        estadoJuego.addPuntuacion(Constantes.ENEMIGO_PUNTOS);
+        estadoJuego.addPuntuacion(Constantes.ENEMIGO_PUNTOS, position);
         super.Destruir();
     }
 
