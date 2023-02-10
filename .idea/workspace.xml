@@ -4,36 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="añadimos fuentes y texto ademas de sdistema reset">
-      <change afterPath="$PROJECT_DIR$/src/Estados/Estado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/Bonus/Instrumental-electronic-music.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_laser1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_lose.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_shieldDown.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_shieldUp.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_twoTone.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_zap.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/Boton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/Sonido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/imput/Mause.java" afterDir="false" />
+    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="añadimos musica y menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Enemigos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Enemigos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_laser1.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_lose.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_shieldDown.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_shieldUp.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_twoTone.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/Bonus/sfx_zap.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recourses/Bonus/️ Espacial _ Música épica de fondo para gameplays (Sin Copyright) ️_ELOJmr5ffBY.mp3" beforePathEscaped="$PROJECT_DIR$/src/Recourses/Bonus/🎮🕹️ Espacial _ Música épica de fondo para gameplays (Sin Copyright) 🎮🕹️_ELOJmr5ffBY.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/CargarRecursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/CargarRecursos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventana/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -258,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676056987372</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="añadimos musica y menu">
+      <created>1676064870855</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676064870855</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,7 +268,8 @@
     <MESSAGE value="terminamos  enemigos" />
     <MESSAGE value="Empezamod HUD" />
     <MESSAGE value="añadimos fuentes y texto ademas de sdistema reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="añadimos fuentes y texto ademas de sdistema reset" />
+    <MESSAGE value="añadimos musica y menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="añadimos musica y menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -18,9 +18,9 @@ public class Constantes {
     public static final long SPAWN_TIME = 3000;
     public static final long PARPADEO_TIME = 200;
     public static final double PLAYER_MAX_VEL = 8.0;
-    public static final String PLAY = "PLAY";
+    public static final String PLAY = "DALE";
 
-    public static final String EXIT = "EXIT";
+    public static final String EXIT = "HUYE";
 
 
 }

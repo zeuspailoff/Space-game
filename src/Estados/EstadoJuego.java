@@ -195,6 +195,7 @@ public class EstadoJuego extends Estado{
         drawPuntuacion((Graphics2D) graphics);
         drawVidas((Graphics2D)graphics);
 
+
     }
 
     private void drawPuntuacion(Graphics2D graphics){

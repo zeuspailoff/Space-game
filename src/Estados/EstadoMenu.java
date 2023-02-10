@@ -6,11 +6,13 @@ import UI.Boton;
 import graphics.Assets;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class EstadoMenu extends Estado{
 
     private ArrayList<Boton> botones;
+
 
     public EstadoMenu() {
 
@@ -48,6 +50,8 @@ public class EstadoMenu extends Estado{
 
     @Override
     public void actualizar() {
+
+
 
         for( Boton b : botones){
             b.actualizar();
