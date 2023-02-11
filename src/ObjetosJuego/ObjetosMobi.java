@@ -21,6 +21,7 @@ public class ObjetosMobi extends ObjetosJuego {
     protected EstadoJuego estadoJuego;
 
     private Sonido texplociones;
+    protected boolean Dead;
 
 
     public ObjetosMobi(Vector2d position, Vector2d velocidad, double maxVel, BufferedImage textura, EstadoJuego estadoJuego) {
@@ -32,6 +33,7 @@ public class ObjetosMobi extends ObjetosJuego {
         altura = textura.getHeight();
         angulo = 0;
         texplociones = new Sonido(Assets.explociones);
+        Dead = false;
     }
 
     protected void colisiones( ){
@@ -46,7 +48,7 @@ public class ObjetosMobi extends ObjetosJuego {
 
             double distance = m.getCenter().subtrat(getCenter()).getMagnitude();
 
-            if (distance < m.ancho/2 + ancho/2 && objetosMobi.contains(this)){
+            if (distance < m.ancho/2 + ancho/2 && objetosMobi.contains(this) && !m.Dead && !Dead){
                 objetosColision(m, this);
 
             }
@@ -70,8 +72,8 @@ public class ObjetosMobi extends ObjetosJuego {
         }
     }
     protected void Destruir() {
-        estadoJuego.getObjetosMobi().remove(this);
 
+        Dead = true;
         if(!(this instanceof Laser)){
             texplociones.play();
         }
@@ -91,4 +93,6 @@ public class ObjetosMobi extends ObjetosJuego {
     public void draw(Graphics graphics) {
 
     }
+
+    public boolean isDead() {return Dead;}
 }

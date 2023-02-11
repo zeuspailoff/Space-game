@@ -27,12 +27,18 @@ public class EstadoJuego extends Estado{
 
     private int oleada = 1;
     private Sonido sonidoFondo;
+    private Cronometro enemigoSpawun;
+    private Cronometro gameOverTimer;
+    private boolean gameOver;
 
     public EstadoJuego() {
 
         player = new Player (new Vector2d(Constantes.WIDTH/2 - Assets.player.getWidth()/2,
                 Constantes.HEIGHT/2 - Assets.player.getHeight()/2), new Vector2d(),
                 Constantes.PLAYER_MAX_VEL, Assets.player, this);
+
+        gameOverTimer = new Cronometro();
+        gameOver= false;
         objetosMobi.add(player);
 
         asteroides = 1;
@@ -40,10 +46,13 @@ public class EstadoJuego extends Estado{
         sonidoFondo = new Sonido(Assets.musicaFondo);
         sonidoFondo.loop();
         sonidoFondo.cambiarVolumen(-10.0f);
+
+        enemigoSpawun = new Cronometro();
+        enemigoSpawun.encendido(Constantes.UFO_SPAWN_RATE);
     }
     public void addPuntuacion(int valor, Vector2d position){
         puntuacion+= valor;
-        mensajes.add(new Mensaje(this, "+" +valor+ "PUNTOS", position,
+        mensajes.add(new Mensaje( "+" +valor+ "PUNTOS", position,
                 Color.WHITE, false, true, Assets.fuenteMed ));
     }
 
@@ -113,7 +122,7 @@ public class EstadoJuego extends Estado{
 
     public void iniciarOleada() {
 
-        mensajes.add(new Mensaje (this, "OLEADA " + oleada,
+        mensajes.add(new Mensaje ( "OLEADA " + oleada,
                 new Vector2d(Constantes.WIDTH / 2, Constantes.HEIGHT / 2),
                 Color.WHITE, true, true, Assets.fuenteGrand ));
         double x, y ;
@@ -147,8 +156,16 @@ public class EstadoJuego extends Estado{
 
     public void actualizar() {
 
-        for (int i = 0; i < objetosMobi.size(); i++)
-            objetosMobi.get(i).actualizar();
+        for (int i = 0; i < objetosMobi.size(); i++){
+
+            ObjetosMobi mo = objetosMobi.get(i);
+
+            mo.actualizar();
+            if(mo.isDead()) {
+                objetosMobi.remove(i);
+                i++;
+            }
+            }
 
         for (int i = 0; i < explociones.size(); i++){
             Animacion anim = explociones.get(i);
@@ -157,6 +174,10 @@ public class EstadoJuego extends Estado{
                 explociones.remove(i);
             }
         }
+        if(!enemigoSpawun.isActivo()){
+            enemigoSpawun.encendido(Constantes.UFO_SPAWN_RATE);
+            apareceEnemigo();
+        }
 
 
         for (int i = 0; i < objetosMobi.size(); i++)
@@ -164,7 +185,7 @@ public class EstadoJuego extends Estado{
                 return;
 
         iniciarOleada();
-        apareceEnemigo();
+
 
     }
 
@@ -176,6 +197,10 @@ public class EstadoJuego extends Estado{
 
         for (int i = 0; i < mensajes.size(); i++){
             mensajes.get(i).draw(graphics2D);
+
+            if(mensajes.get(i).isDead()){
+                mensajes.remove(i);
+            }
         }
 
 
@@ -213,6 +238,10 @@ public class EstadoJuego extends Estado{
     }
 
     private void drawVidas(Graphics graphics){
+
+        if(vidas< 1)
+            return;
+
         Vector2d vidaPos = new Vector2d(25 , 25);
         graphics.drawImage(Assets.vida, (int) vidaPos.getX(), (int) vidaPos.getY() ,null);
 
@@ -245,7 +274,26 @@ public class EstadoJuego extends Estado{
         return player;
     }
 
-    public void quitarVida(){
+    public boolean quitarVida(){
         vidas--;
+        return vidas > 0;
+    }
+
+    public void gameOver() {
+
+        Mensaje gameOverMag = new Mensaje(
+
+                "GAME OVER",
+                new Vector2d(Constantes.WIDTH/2 - Assets.player.getWidth()/2,
+                        Constantes.HEIGHT/2 - Assets.player.getHeight()/2),
+                Color.WHITE,
+                true,
+                true,
+                Assets.fuenteGrand
+        );
+
+        this.mensajes.add(gameOverMag);
+        gameOverTimer.encendido(Constantes.GAME_OVER_TIME);
+        gameOver = true;
     }
 }

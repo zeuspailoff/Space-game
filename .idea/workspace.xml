@@ -7,8 +7,10 @@
     <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="añadimos musica y menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Mensaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +42,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\proyectos open bootcamp\java\Game\src" />
@@ -240,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676064870855</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="añadimos musica y menu">
+      <created>1676065965582</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676065965582</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class Mensaje {
 
-    private EstadoJuego estadoJuego;
+
     private float alpha;
     private String text;
     private Vector2d position;
@@ -17,10 +17,11 @@ public class Mensaje {
     private boolean efecto;
     private Font fuente;
     private final float deltaAlpha = 0.01f;
+    private boolean dead;
 
-    public Mensaje(EstadoJuego estadoJuego, String text,
+    public Mensaje( String text,
                    Vector2d position, Color color, boolean center, boolean efecto, Font fuente) {
-        this.estadoJuego = estadoJuego;
+
 
         this.text = text;
         this.position = position;
@@ -28,6 +29,7 @@ public class Mensaje {
         this.center = center;
         this.efecto = efecto;
         this.fuente = fuente;
+        this.dead = false;
 
         if(efecto){
             alpha = 1;
@@ -57,11 +59,13 @@ public class Mensaje {
             alpha += deltaAlpha;
         }
         if(efecto && alpha < 0 ){
-            estadoJuego.getMensajes().remove(this);
+            dead = true;
         }
         if( !efecto && alpha > 1){
             efecto = true;
             alpha =1;
         }
     }
+
+    public boolean isDead(){return dead;}
 }

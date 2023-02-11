@@ -21,6 +21,11 @@ public class Constantes {
     public static final String PLAY = "DALE";
 
     public static final String EXIT = "HUYE";
+    public static final long UFO_SPAWN_RATE = 10000;
+    public static final int LOADING_BAR_WIDTH = 500;
+    public static final int LOADING_BAR_HEIGHT = 50;
+    public static final long GAME_OVER_TIME = 3000;
+
 
 
 }

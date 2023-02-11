@@ -119,8 +119,13 @@ public class Player extends ObjetosMobi{
         apareciendo = true;
         spawnTime.encendido(Constantes.SPAWN_TIME);
         perder.play();
+
+        if(!estadoJuego.quitarVida()){
+            estadoJuego.gameOver();
+            super.Destruir();
+        }
         resetValores();
-        estadoJuego.quitarVida();
+
     }
 
     private void resetValores(){
