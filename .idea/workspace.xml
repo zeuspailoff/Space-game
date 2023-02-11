@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="añadimos musica y menu">
+    <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="añadimos game over">
+      <change afterPath="$PROJECT_DIR$/json-20220924.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Estados/EstadoPuntuacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IO/JsonParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IO/PuntuacionFecha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Mensaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/ObjetosMobi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imput/Teclado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imput/Teclado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventana/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +47,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.externalDependencies"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\proyectos open bootcamp\java\Game\src" />
@@ -249,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676065965582</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="añadimos game over">
+      <created>1676119321967</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676119321968</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +291,8 @@
     <MESSAGE value="Empezamod HUD" />
     <MESSAGE value="añadimos fuentes y texto ademas de sdistema reset" />
     <MESSAGE value="añadimos musica y menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="añadimos musica y menu" />
+    <MESSAGE value="añadimos game over" />
+    <option name="LAST_COMMIT_MESSAGE" value="añadimos game over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

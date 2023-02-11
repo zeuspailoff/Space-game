@@ -1,5 +1,7 @@
 package ObjetosJuego;
 
+import javax.swing.filechooser.FileSystemView;
+
 public class Constantes {
 
     public static final int WIDTH = 1000;
@@ -25,6 +27,16 @@ public class Constantes {
     public static final int LOADING_BAR_WIDTH = 500;
     public static final int LOADING_BAR_HEIGHT = 50;
     public static final long GAME_OVER_TIME = 3000;
+    public static final String RETURN = "VOLVER";
+    public static final String HIGH_SCORES = "PUNTUACIONES";
+
+    public static final String SCORE = "PUNTOS";
+    public static final String DATE = "FECHA";
+
+
+    public static final String SCORE_PATH = FileSystemView.getFileSystemView().getDefaultDirectory().getPath()
+            +"D:\\proyectos open bootcamp\\java\\Game\\data.json";
+
 
 
 

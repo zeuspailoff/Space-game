@@ -8,8 +8,10 @@ import Estados.EstadoJuego;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
 import graphics.Assets;
+import graphics.CargarRecursos;
 import imput.Mause;
 import imput.Teclado;
 
@@ -32,7 +34,7 @@ public class Ventana extends JFrame implements Runnable{
 
     private Teclado teclado;
     private Mause mouseInput;
-
+    private BufferedImage fondo;
 
 
 
@@ -46,6 +48,7 @@ public class Ventana extends JFrame implements Runnable{
 
 
 
+
         canvas= new Canvas();
         teclado = new Teclado();
         mouseInput = new Mause();
@@ -56,6 +59,8 @@ public class Ventana extends JFrame implements Runnable{
         canvas.setFocusable(true);
 
         add(canvas);
+
+
         canvas.addKeyListener(teclado);
         canvas.addMouseListener(mouseInput);
         canvas.addMouseMotionListener(mouseInput);
@@ -78,7 +83,7 @@ public class Ventana extends JFrame implements Runnable{
         graphics = bs.getDrawGraphics();
         //zona para dibujar
 
-        graphics.setColor(Color.black);
+        graphics.setColor(Color.BLACK);
         graphics.fillRect(0,0,Constantes.WIDTH, Constantes.HEIGHT);
 
         Estado.getEstadoActual().draw(graphics);

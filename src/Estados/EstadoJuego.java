@@ -1,4 +1,6 @@
 package Estados;
+import IO.JsonParser;
+import IO.PuntuacionFecha;
 import Math.Vector2d;
 import ObjetosJuego.*;
 import graphics.Animacion;
@@ -8,6 +10,8 @@ import graphics.Texto;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static graphics.Assets.enemigo;
@@ -174,6 +178,16 @@ public class EstadoJuego extends Estado{
                 explociones.remove(i);
             }
         }
+
+        if(gameOver && !gameOverTimer.isActivo()){
+            try {
+                ArrayList<PuntuacionFecha> dataList = JsonParser.readFile();
+                dataList.add(new PuntuacionFecha(puntuacion));
+                JsonParser.writeFile(dataList);
+            } catch (IOException e) {
+               e.printStackTrace();
+            }
+        }
         if(!enemigoSpawun.isActivo()){
             enemigoSpawun.encendido(Constantes.UFO_SPAWN_RATE);
             apareceEnemigo();
@@ -295,5 +309,6 @@ public class EstadoJuego extends Estado{
         this.mensajes.add(gameOverMag);
         gameOverTimer.encendido(Constantes.GAME_OVER_TIME);
         gameOver = true;
+        Estado.cambiarEstado(new EstadoMenu());
     }
 }

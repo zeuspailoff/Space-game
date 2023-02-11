@@ -18,10 +18,10 @@ public class Teclado implements KeyListener {
 
     }
     public void actualizar(){
-        UP = keys[KeyEvent.VK_UP];
-        LEFT = keys[KeyEvent.VK_LEFT];
-        RIGHT = keys[KeyEvent.VK_RIGHT];
-        SHOOT = keys[KeyEvent.VK_C];
+        UP = keys[KeyEvent.VK_W];
+        LEFT = keys[KeyEvent.VK_A];
+        RIGHT = keys[KeyEvent.VK_D];
+        SHOOT = keys[KeyEvent.VK_UP];
     }
 
     @Override

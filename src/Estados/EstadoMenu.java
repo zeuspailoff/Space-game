@@ -45,6 +45,21 @@ public class EstadoMenu extends Estado{
                 }
         ));
 
+        botones.add(new Boton(
+                Assets.botonYellow,
+                Assets.botonGreen,
+                Constantes.WIDTH / 2 - Assets.botonYellow.getWidth() / 2,
+                Constantes.HEIGHT / 2 - Assets.botonYellow.getHeight() * 4,
+                Constantes.HIGH_SCORES,
+                new Action() {
+
+                    @Override
+                    public void doAction() {
+                        Estado.cambiarEstado(new EstadoPuntuacion());
+                    }
+                }
+        ));
+
 
     }
 
