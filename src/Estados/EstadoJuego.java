@@ -1,4 +1,5 @@
 package Estados;
+
 import IO.JsonParser;
 import IO.PuntuacionFecha;
 import Math.Vector2d;
@@ -6,20 +7,15 @@ import ObjetosJuego.*;
 import graphics.Animacion;
 import graphics.Assets;
 import graphics.Sonido;
-import graphics.Texto;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static graphics.Assets.enemigo;
-import static graphics.Assets.vida;
-
 public class EstadoJuego extends Estado{
 
-    private Player player;
+    private final Player player;
     private ArrayList<ObjetosMobi> objetosMobi = new ArrayList<ObjetosMobi>();
 
     private ArrayList<Animacion> explociones = new ArrayList<Animacion>();

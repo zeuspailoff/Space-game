@@ -3,17 +3,13 @@ package ventana;
 import Estados.Estado;
 import Estados.EstadoMenu;
 import ObjetosJuego.Constantes;
-import ObjetosJuego.Constantes.*;
-import Estados.EstadoJuego;
+import graphics.Assets;
+import imput.Mause;
+import imput.Teclado;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
-
-import graphics.Assets;
-import graphics.CargarRecursos;
-import imput.Mause;
-import imput.Teclado;
 
 
 public class Ventana extends JFrame implements Runnable{
@@ -21,21 +17,15 @@ public class Ventana extends JFrame implements Runnable{
 
     private final Canvas canvas;
     private Thread thread;
-    private BufferStrategy bs;
-    private Graphics graphics;
     private boolean running = false;
 
     private final int FPS = 60;
-    private double TARGETTIME = 1000000000/FPS;
     private double delta = 0;
     private int AVERAGEFPS = FPS;
 
 
 
-    private Teclado teclado;
-    private Mause mouseInput;
-    private BufferedImage fondo;
-
+    private final Teclado teclado;
 
 
     public Ventana() {
@@ -51,7 +41,7 @@ public class Ventana extends JFrame implements Runnable{
 
         canvas= new Canvas();
         teclado = new Teclado();
-        mouseInput = new Mause();
+        Mause mouseInput = new Mause();
 
         canvas.setPreferredSize(new Dimension(Constantes.WIDTH,  Constantes.HEIGHT));
         canvas.setMaximumSize(new Dimension(Constantes.WIDTH,  Constantes.HEIGHT));
@@ -74,13 +64,13 @@ public class Ventana extends JFrame implements Runnable{
 
     }
     private void draw(  ){
-        bs = canvas.getBufferStrategy();
+        BufferStrategy bs = canvas.getBufferStrategy();
 
         if(bs == null){
                 canvas.createBufferStrategy(3);
                 return;
             }
-        graphics = bs.getDrawGraphics();
+        Graphics graphics = bs.getDrawGraphics();
         //zona para dibujar
 
         graphics.setColor(Color.BLACK);
@@ -112,6 +102,7 @@ public class Ventana extends JFrame implements Runnable{
 
             while (running) {
                 now = System.nanoTime();
+                double TARGETTIME = 1000000000 / FPS;
                 delta += (now - lastTime) / TARGETTIME;
                 time += (now - lastTime);
                 lastTime = now;

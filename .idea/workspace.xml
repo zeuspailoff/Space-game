@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6220b231-40d0-46d5-b47a-6faafbcc3790" name="Changes" comment="añadimos game over">
-      <change afterPath="$PROJECT_DIR$/json-20220924.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Estados/EstadoPuntuacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IO/JsonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IO/PuntuacionFecha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EstadoMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjetosJuego/Constantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imput/Teclado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imput/Teclado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventana/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,9 +42,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/proyectos open bootcamp/java/Game",
     "settings.editor.selected.configurable": "preferences.externalDependencies"
   }
 }]]></component>
@@ -262,7 +256,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676119321968</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="añadimos game over">
+      <created>1676125589746</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676125589746</updated>
+    </task>
+    <task id="LOCAL-00027" summary="añadimos game over">
+      <created>1676125600082</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1676125600082</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
